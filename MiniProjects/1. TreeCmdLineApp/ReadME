@@ -1,0 +1,43 @@
+This is an implementation of minimal version of tree linux command
+using Python which recursively list or display the content of a
+directory in a tree-like format.
+
+### Requirements
+Python3
+
+
+### How to invoke app?
+% python tree.py --help
+usage: tree [--help] [-a] [-d] [-i] [<directory list>]
+------- Listing options -------
+-a            All files are listed.
+-d            List directories only.
+------- Graphics options -------
+-i            Don't print indentation lines.
+------- Miscellaneous options -------
+--help        Print usage and this help message and exit.
+
+### Examples
+#1) % python tree.py .
+.
+|__ ReadMe
+|__ __pycache__
+|   |__ argument_parser.cpython-38.pyc
+|   |__ data_structures.cpython-38.pyc
+|__ argument_parser.py
+|__ data_structures.py
+|__ tree.py
+
+#2) python tree.py . -i
+.
+ReadMe
+__pycache__
+argument_parser.cpython-38.pyc
+data_structures.cpython-38.pyc
+argument_parser.py
+data_structures.py
+tree.py
+
+#3) python tree.py . -d
+.
+|__ __pycache__ 
